@@ -21,6 +21,7 @@ cover: https://s2.loli.net/2024/07/01/d3lKD8u5bsSI74B.png
       url = https://github.com/jerryc127/hexo-theme-butterfly.git
     ```
 3. 重新stage change。
+
 > 样式丢失
 
 ![hexo-style-lose.png](https://s2.loli.net/2024/07/01/CBPSxAbU394uMaV.png)  
