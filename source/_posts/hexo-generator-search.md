@@ -16,6 +16,14 @@ cover: https://s2.loli.net/2024/07/01/d3lKD8u5bsSI74B.png
 npm install hexo-generator-search --save
 ```
 
+> 配置Hexo的`_config.yml`
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  content: true
+```
 > 配置butterfly的`_config.yml`
 
 ```yaml
