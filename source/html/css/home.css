@@ -1,0 +1,10 @@
+#recent-posts.recent-posts {
+  overflow: hidden;
+}
+.recent-post-item {
+  position: relative;
+  left: 300px;
+}
+.recent-post-item:nth-child(2n) {
+  left: -300px;
+}
