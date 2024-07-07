@@ -4,7 +4,7 @@ $(function () {
       left: 0,
       right: 0,
     },
-    300,
+    600,
     "easeInQuad",
     function () {
       $("#recent-posts.recent-posts").css("overflow", "visible");
