@@ -83,3 +83,16 @@ const randomRGBColor = () => `rgb(${getRandomInt(0, 256)}, ${getRandomInt(0, 256
 const rgb = randomRGBColor();
 console.log(`%c${rgb}`, `color:${rgb}`);
 ```
+
+#### 文件大小单位转换
+```js
+function autoSizeUnit(byte) {
+  var units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB', 'BB'];
+  var unitIndex = 0;
+  while (byte >= 1024 && unitIndex < units.length - 1) {
+    byte /= 1024;
+    unitIndex++;
+  }
+  return `${byte.toFixed(2)} ${units[unitIndex]}`;
+}
+```
