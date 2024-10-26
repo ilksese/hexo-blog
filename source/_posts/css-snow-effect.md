@@ -5,7 +5,7 @@ tags:
   - CSS
 categories: 前端
 description: CSS animation 下雪效果
-cover: https://github.com/irfanhakim-as/vtuber-icons/blob/master/icons/css.png?raw=true
+cover: image/css.png
 ---
 > 思路
 

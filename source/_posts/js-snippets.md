@@ -5,7 +5,7 @@ tags:
   - JavaScript
 categories: 前端
 description: 一些实用的JavaScript代码
-cover: https://github.com/irfanhakim-as/vtuber-icons/blob/master/icons/javascript.jpg?raw=true
+cover: image/javascript.jpg
 ---
 
 #### 2的n次方
