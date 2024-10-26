@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input-number</title>
+  </head>
+  <body>
+    <input id="input-number" type="text" inputmode="numeric" pattern="[0-9]+" />
+    <h4>使用type='number'</h4>
+    <input id="input-number-2" type="number" inputmode="numeric"/>
+    <script>
+      function validateInut(el) {
+        el.addEventListener("beforeinput", function (e) {
+          let beforeValue = el.value;
+          e.target.addEventListener(
+            "input",
+            function () {
+              if (el.validity.patternMismatch) {
+                el.value = beforeValue;
+              }
+            },
+            { once: true }
+          );
+        });
+      }
+      validateInut(document.getElementById("input-number"));
+    </script>
+  </body>
+</html>
