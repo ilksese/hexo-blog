@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px;">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>post-radient-border</title>
+  <style>
+    #container-1 {
+      width: fit-content;
+      padding: 1em 2em;
+      background-color: skyblue;
+      border-image: linear-gradient(90deg, red 20%, yellow 60%, blue 100%) 1 1 1 1;
+      border-width: 3px;
+      border-style: solid;
+      cursor: pointer;
+    }
+
+    #container-2 {
+      width: fit-content;
+      padding: 1em 2em;
+      background-color: skyblue;
+      border-image: linear-gradient(90deg, red 20%, yellow 60%, blue 100%) 1 1 1 1;
+      border-width: 3px;
+      border-style: solid;
+      cursor: pointer;
+      border-radius: 2em;
+    }
+
+    #container-3 {
+      width: fit-content;
+      border: 3px solid transparent;
+      background: linear-gradient(skyblue, skyblue), linear-gradient(90deg, red 20%, yellow 60%, blue 100%);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-radius: 2em;
+      cursor: pointer;
+      .text {
+        padding: 1em 2em;
+      }
+    }
+  </style>
+</head>
+
+<body style="display: grid;place-items: center;row-gap: 4px;">
+  <div id="container-1">
+    border-image
+  </div>
+  <div id="container-2">
+    border-image (border-radius: 2em);
+  </div>
+  <div id="container-3">
+    <div class="text">
+      background + background-origin + background-clip
+    </div>
+</body>
+
+</html>
