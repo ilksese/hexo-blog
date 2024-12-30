@@ -96,3 +96,16 @@ function autoSizeUnit(byte) {
   return `${byte.toFixed(2)} ${units[unitIndex]}`;
 }
 ```
+
+#### 小驼峰字符串
+```js
+function camelCase(str) {
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  const tokens = str.split(/[^a-zA-Z0-9]|((?<=\D)\B(?=\d))|((?<=\d)\B(?=[a-zA-Z]))/g).filter(Boolean)
+  return tokens[0] + tokens.slice(1).map(capitalizeFirstLetter).join("")
+}
+
+console.log(camelCase("_lsd33432ds0-a-dk1")); // lsd33432Ds0ADk1
+```
