@@ -109,3 +109,44 @@ function camelCase(str) {
 
 console.log(camelCase("_lsd33432ds0-a-dk1")); // lsd33432Ds0ADk1
 ```
+
+#### 滑动Chunk
+```ts
+function slidingChunk<T>(array: T[], size: number) {
+  if (!Array.isArray(array)) return []
+  if (size <= 0) return []
+  if (size > array.length) return [array]
+
+  return Array.from({ length: array.length - size + 1 }, (_, i) => array.slice(i, i + size))
+}
+
+console.log(slidingChunk([1,2,3,4], 2)); // [[1,2],[2,3],[3,4]]
+```
+
+#### 排列数 P(n,m)
+```ts
+const getPermutations = <T>(array: T[], m: number): T[][] => {
+  if (m > array.length || m < 0) return []
+  if (m === 0) return [[]]
+
+  const result: T[][] = []
+
+  const backtrack = (current: T[], used: boolean[]) => {
+    if (current.length === m) {
+      result.push([...current])
+      return
+    }
+
+    for (let i = 0; i < array.length; i++) {
+      if (used[i]) continue
+
+      current.push(array[i]!)
+      used[i] = true
+      backtrack(current, used)
+      current.pop()
+      used[i] = false
+    }
+}
+
+console.log(getPermutations([1, 2, 2], 2)); // 输出: [[1, 2], [2, 1], [2, 2]]
+```
