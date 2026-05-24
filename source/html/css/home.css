@@ -1,10 +1,52 @@
+@keyframes slideInRight {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 #recent-posts.recent-posts {
   overflow: hidden;
 }
+
 .recent-post-item {
-  position: relative;
-  left: 300px;
+  animation: slideInRight 600ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
+
 .recent-post-item:nth-child(2n) {
-  left: -300px;
+  animation-name: slideInLeft;
+}
+
+.recent-post-item:nth-child(1) { animation-delay: 0ms; }
+.recent-post-item:nth-child(2) { animation-delay: 100ms; }
+.recent-post-item:nth-child(3) { animation-delay: 200ms; }
+.recent-post-item:nth-child(4) { animation-delay: 300ms; }
+.recent-post-item:nth-child(5) { animation-delay: 400ms; }
+.recent-post-item:nth-child(6) { animation-delay: 500ms; }
+.recent-post-item:nth-child(7) { animation-delay: 600ms; }
+.recent-post-item:nth-child(8) { animation-delay: 700ms; }
+.recent-post-item:nth-child(9) { animation-delay: 800ms; }
+.recent-post-item:nth-child(10) { animation-delay: 900ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .recent-post-item {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
 }
